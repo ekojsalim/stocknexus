@@ -14,6 +14,21 @@ Template.stocks.events({
 			Materialize.toast(b, 4000);
 		});
 	},
+	"click .delete": function() {
+		$("#modaldelete").openModal();
+	},
+	"click #submitDelete": function() {
+		var input = $("#ticking").val().toUpperCase();
+		console.log(input);
+		var id = Stocks.findOne({symbolName: input})._id;
+		console.log(id);
+		Stocks.remove(id, function(a, b) {
+			console.log(a, b);
+			if(b > 0) {
+				Materialize.toast("Removed!", 3000);
+			}
+		});
+	},
 	"click .allChart": function() {
 		var data = Stocks.find().fetch().map(function(item) {
 			return {
@@ -57,4 +72,8 @@ Template.stocks.events({
 		});
 		$("#modalGraph").openModal();
 	}
+});
+
+Template.stocks.onRendered(function(){
+	this.subscribe("stocks");
 });
