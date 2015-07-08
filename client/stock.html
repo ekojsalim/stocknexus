@@ -1,0 +1,42 @@
+<template name="stock">
+	<div class="col s12 m4">
+		<a id="openGraph">
+			<div class="card test hoverable">
+				<div class="card-image">
+					<div id="{{_id}}" style="height: 200px; min-width: 310px"></div>	
+				</div>
+				<div class="card-content white">
+					<div class="row valign-wrapper">
+						<div class="col s12 m7">
+							<h5 class="color-text left">{{symbolName}}</h5>
+						</div>
+						<div class="col s12 m5">
+							<span class="color-text">{{company}}</span>
+						</div>
+					</div>
+					<div class="divider"></div>
+					<div class="row">
+						<div class="left">
+							<p class="center">{{marketCap}}</p>
+							<p class="grey-text">Market cap</p>
+						</div>
+						<div class="right">
+							<p class="center">{{dividendYield}}</p>
+							<p class="grey-text">Dividend yield</p>
+						</div>							
+					</div>				
+				</div>
+				<div class="row">
+					<ul class="collection">
+						<li class="collection-item test"><span>Previous Close</span><span class="secondary-content grey-text">{{previousClose}}</span></li>					
+						<li class="collection-item test"><span>PE ratio</span><span class="secondary-content grey-text">{{peRatio}}</span></li>					
+						<li class="collection-item test"><span>Open</span><span class="secondary-content grey-text">{{open}}</span></li>
+						<li class="collection-item test"><span>Low</span><span class="secondary-content grey-text">{{low}}</span></li>
+						<li class="collection-item test"><span>High</span><span class="secondary-content grey-text">{{high}}</span></li>												
+					</ul>
+				</div>
+			</div>
+		</a>
+	</div>
+	<!--Modal-->	
+</template>

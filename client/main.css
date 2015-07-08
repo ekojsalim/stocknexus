@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Istok Web', sans-serif;
+}
+
+.test {
+	background-color: #DCDCE9 !important;
+}
+
+.row {
+	margin:0;
+}
+
+.divider {
+	margin: 20px 0;
+}
+
+.color-text {
+	color:#A6C675;
+}
+
+#modalnew {
+	width: 25%;
+}
+
+#modalGraph {
+	width:70%;
+}
+
+#openGraph:hover {
+	cursor: pointer;
+}
+
+a {
+	color:#0097A7 !important;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}

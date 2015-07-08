@@ -1,0 +1,37 @@
+<template name="stocks">
+	<div class="container">
+		<div class="row">
+			{{#each company}}
+			{{> stock}}
+			{{/each}}
+		</div>
+	</div>
+	<div class="fixed-action-btn">
+		<a class="btn-floating btn-large red waves-effect waves-light">
+			<i class="large material-icons">settings</i>
+		</a>
+		<ul>
+			<li><a class="btn-floating red trigger modal-trigger"><i class="material-icons">add</i></a></li>
+			<li><a class="btn-floating yellow darken-1 allChart"><i class="material-icons">insert_chart</i></a></li>
+		</ul>		
+	</div>
+	<!--Modal-->
+	<div id="modalnew" class="modal">
+		<div class="modal-content">
+			<div class="input-field">
+				<input id="ticker" type="text" class="validate">
+				<label for="first_name2">Ticker Symbol</label>					
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a class="modal-action modal-close waves-effect waves-green btn-flat" id="submitNew">Submit</a>
+		</div>
+	</div>
+	<div id="modalGraph" class="modal">
+		<div class="modal-content">
+			<div class="input-field">
+				<div id="modalStock" style="height: 400px; min-width: 900px"></div>				
+			</div>
+		</div>
+	</div>	
+</template>
